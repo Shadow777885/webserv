@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Page of Spi</title>
+	</head>
+
+	<body>
+		<form>
+	    	<div>
+	    	    <label for="fname">Username:</label><br>
+	    	    <input id="fname" type="text" name="fname" placeholder="John" required>
+				<br>
+
+		        <label for="pwd">Password:</label><br>
+		        <input id="password" type="password" name="password" placeholder="Enter Password" required>
+				<br>
+		    </div>
+		</form>
+		<div>
+			<button onclick="comparePass()">Submit</button>
+		</div>
+	</body>	
+</html>
+
+<script>
+	function comparePass(){
+
+		var username = document.getElementById("fname").value;
+		var user_in = document.getElementById("password").value;
+		var pass = 123456;
+
+		if (user_in == pass && username.length > 3){
+			alert("Passwords match! Hello " + username);	
+			window.location.replace("index.html");
+    	} 
+		else{
+        	alert("Invalid Password or Username length...");		
+		}
+	}
+</script>
