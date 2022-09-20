@@ -3,6 +3,7 @@
 	<head>
 		<title>Login Page of Spi</title>
 	</head>
+	<link rel= "stylesheet" href="style.css">
 
 	<body>
 		<form>
@@ -17,7 +18,7 @@
 		    </div>
 		</form>
 		<div>
-			<button onclick="comparePass()">Submit</button>
+			<a class="button" onclick="comparePass()">Submit</a>
 		</div>
 	</body>	
 </html>
@@ -30,7 +31,7 @@
 		var pass = 123456;
 
 		if (user_in == pass && username.length > 3){
-			alert("Passwords match! Hello " + username);	
+			alert("Passwords match!\nHello " + username + "!");	
 			window.location.replace("index.html");
     	} 
 		else{
@@ -38,3 +39,4 @@
 		}
 	}
 </script>
+
