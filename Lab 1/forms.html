@@ -6,7 +6,7 @@
 	<link rel= "stylesheet" href="style.css">
 
 	<body>
-		<form>
+		<form action="test.php" method="GET">
 	    	<div>
 	    	    <label for="fname">Username:</label><br>
 	    	    <input id="fname" type="text" name="fname" placeholder="John" required>
@@ -15,28 +15,14 @@
 		        <label for="pwd">Password:</label><br>
 		        <input id="password" type="password" name="password" placeholder="Enter Password" required>
 				<br>
+				<input id="submit" type="submit" name="submit" class="button" value="Submit">
+				<br>
 		    </div>
 		</form>
 		<div>
-			<a class="button" onclick="comparePass()">Submit</a>
 		</div>
 	</body>	
 </html>
 
-<script>
-	function comparePass(){
 
-		var username = document.getElementById("fname").value;
-		var user_in = document.getElementById("password").value;
-		var pass = 123456;
-
-		if (user_in == pass && username.length > 3){
-			alert("Passwords match!\nHello " + username + "!");	
-			window.location.replace("index.html");
-    	} 
-		else{
-        	alert("Invalid Password or Username length...");		
-		}
-	}
-</script>
 

@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <head> 
-        <title> PHPtest </title>
-    </head>
-
-    <body>
-        <p>Your User agent is:<?= $_SERVER['HTTP_USER_AGENT']; ?></p>
-
-    </body>
+<p> <?= var_dump($_GET) ?> </p> 
+<p> <?= var_dump($_POST) ?> </p>
 </html>
