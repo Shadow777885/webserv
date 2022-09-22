@@ -5,7 +5,7 @@
     </head>
 
     <body>
-        <p><?= var_dump($_SERVER) ?></p>
+        <p>Your User agent is:<?= $_SERVER['HTTP_USER_AGENT']; ?></p>
 
     </body>
 </html>
