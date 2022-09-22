@@ -5,6 +5,7 @@ body {
 p {
     color: #006400;
     font-family: "monaco", monospace;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
 }
 
 h1 {
