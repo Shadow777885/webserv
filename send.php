@@ -16,12 +16,13 @@
     //$sql = "INSERT INTO Userinfo (username, userid) VALUES ('{$newuser}', {$newid});";
     //$result = mysqli_query($conn, $sql);
     //echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
-    $sql = "SELECT id FROM Userinfo WHERE id='{$pullID}';";
+    $sql = "SELECT id FROM Userinfo WHERE id={$pullID};";
     $result = mysqli_query($conn, $sql);
     $row = mysql_fetch_row($result);
-    echo $row[0]; // id
-    echo $row[1]; // Username
-    echo $row[2]; // Userid
+    foreach($result as $row) // There should only be one row returned! 
+    { 
+        echo "{$row['course_name']} has {$row['num_students']} students."; 
+    } 
     mysqli_close($conn);
     ?>
     <p>
