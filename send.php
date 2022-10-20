@@ -21,7 +21,7 @@
     $row = mysql_fetch_row($result);
     foreach($result as $row) // There should only be one row returned! 
     { 
-        echo "{$row['course_name']} has {$row['num_students']} students."; 
+        echo "ID: {$row['id']} | {$row['username']} | UserID: {$row[userid]} students."; 
     } 
     mysqli_close($conn);
     ?>
