@@ -11,7 +11,7 @@
     $newuser = $_POST['fname'];
     $newid = $_POST['ID'];
 
-    $sql = "INSERT INTO Userinfo (username, userid) VALUES ($newuser, $newid)";
+    $sql = "INSERT INTO Userinfo (username, userid) VALUES ($newuser, $newid);";
     $result = mysqli_query($conn, $sql);
     mysqli_close($conn);
     echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
