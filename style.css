@@ -30,7 +30,7 @@ h1 {
     background-color: black;
     color: greenyellow;
   }
-  input[type=password] {
+  input[type=ID] {
     border: 2px solid red;
     border-radius: 4px;
     background-color: black;
