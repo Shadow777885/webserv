@@ -18,11 +18,11 @@
     echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
     $sql = "SELECT id FROM Userinfo WHERE id='{$pullID}';";
     $result = mysqli_query($conn, $sql);
-     mysqli_close($conn);
-     $row = mysql_fetch_row($result);
-     echo $row[0]; // id
-     echo $row[1]; // Username
-     echo $row[2]; // Userid
+    $row = mysql_fetch_row($result);
+    echo $row[0]; // id
+    echo $row[1]; // Username
+    echo $row[2]; // Userid
+    mysqli_close($conn);
     ?>
     <p>
 </body>
