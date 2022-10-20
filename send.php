@@ -13,9 +13,9 @@
     $pullID = htmlspecialchars($_POST['pullID']);
 
 
-    $sql = "INSERT INTO Userinfo (username, userid) VALUES ('{$newuser}', {$newid});";
-    $result = mysqli_query($conn, $sql);
-    echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
+    //$sql = "INSERT INTO Userinfo (username, userid) VALUES ('{$newuser}', {$newid});";
+    //$result = mysqli_query($conn, $sql);
+    //echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
     $sql = "SELECT id FROM Userinfo WHERE id='{$pullID}';";
     $result = mysqli_query($conn, $sql);
     $row = mysql_fetch_row($result);
