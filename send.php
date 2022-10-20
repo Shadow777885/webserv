@@ -10,7 +10,7 @@
     $conn = mysqli_connect($server, $username, $password, $database);
     $newuser = htmlspecialchars($_POST['fname']);
     $newid = htmlspecialchars($_POST['ID']);
-    $pullID = htmlspecialchars($_POST['PullID']);
+    $pullID = htmlspecialchars($_POST['pullID']);
 
 
     $sql = "INSERT INTO Userinfo (username, userid) VALUES ('{$newuser}', {$newid});";
