@@ -6,7 +6,7 @@
     $server = "localhost";
     $username = "php";
     $password = "1.1.";
-    $dbname = "Users";
+    $database = "Users";
     $conn = mysqli_connect($server, $username, $password, $database);
     $newuser = htmlspecialchars($_POST['fname']);
     $newid = htmlspecialchars($_POST['ID']);
