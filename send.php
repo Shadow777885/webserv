@@ -3,7 +3,7 @@
 <body>
     <p>
     <?php
-    $servername = "localhost";
+    $server = "localhost";
     $username = "php";
     $password = "1.1.";
     $dbname = "Users";
