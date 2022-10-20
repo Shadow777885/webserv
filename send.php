@@ -13,7 +13,7 @@
 
     $sql = "INSERT INTO Userinfo (username, userid) VALUES ($newuser, $newid);";
     $result = mysqli_query($conn, $sql);
-    echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
+    //echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
     mysqli_close($conn);
     ?>
     <p>
