@@ -18,10 +18,19 @@
     //echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
     $sql = "SELECT id, username, userid FROM Userinfo WHERE id={$pullID};";
     $result = mysqli_query($conn, $sql);
-    foreach($result as $row) // There should only be one row returned! 
-    { 
-        echo "ID: {$row['id']}". "<br>". "Username:{$row['username']}". "<br>". "UserID: {$row['userid']}"; 
+    if ($result)
+    {
+        foreach($result as $row) // There should only be one row returned! 
+        {
+            echo "ID: {$row['id']}". "<br>". "Username: {$row['username']}". "<br>". "UserID: {$row['userid']}"; 
+        }
     }
+    else
+    {
+        echo "Sorry, this person doesn't exist yet";
+    }
+
+
     mysqli_close($conn);
     ?>
     <p>
