@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+    <link rel= "stylesheet" href="style.css">
     <p>
     <?php
     $server = "localhost";
@@ -12,13 +13,11 @@
     $newid = htmlspecialchars($_POST['ID']);
     $pullID = htmlspecialchars($_POST['pullID']);
 
-
+    $result = mysqli_query($conn, $sql);
     //$sql = "INSERT INTO Userinfo (username, userid) VALUES ('{$newuser}', {$newid});";
-    //$result = mysqli_query($conn, $sql);
     //echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
     $sql = "SELECT id FROM Userinfo WHERE id={$pullID};";
     $result = mysqli_query($conn, $sql);
-    $row = mysql_fetch_row($result);
     foreach($result as $row) // There should only be one row returned! 
     { 
         echo "ID: {$row['id']} | {$row['username']} | UserID: {$row['userid']}"; 
