@@ -6,6 +6,7 @@ p {
     color: #006400;
     font-family: "monaco", monospace;
     text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    font-size: larger;
 }
 
 h1 {
@@ -29,7 +30,6 @@ h1 {
     border-radius: 4px;
     background-color: black;
     color: greenyellow;
-    font-size: larger;
   }
   input[type=ID] {
     border: 2px solid red;
