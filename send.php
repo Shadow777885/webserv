@@ -25,7 +25,7 @@
             echo "ID: {$row['id']}". "<br>". "Username: {$row['username']}". "<br>". "UserID: {$row['userid']}"; 
         }
     }
-    else
+    if (!$result)
     {
         echo "Sorry, this person doesn't exist yet";
     }
