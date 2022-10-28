@@ -26,7 +26,7 @@
     }
     else
     {
-        echo "Sorry, this person doesn't exist yet";
+        echo "Sorry, this person doesn't exist yet :(";
     }
 
     mysqli_close($conn);
