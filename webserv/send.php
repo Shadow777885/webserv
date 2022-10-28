@@ -21,7 +21,7 @@
     $row = mysql_fetch_row($result);
     foreach($result as $row) // There should only be one row returned! 
     { 
-        echo "ID: {$row[id]} | {$row['username']} | UserID: {$row[userid]}"; 
+        echo "ID: {$row['id']} | {$row['username']} | UserID: {$row['userid']}"; 
     }
     echo "Just A test"; 
     mysqli_close($conn);
