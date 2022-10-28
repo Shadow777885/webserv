@@ -6,7 +6,7 @@ p {
     color: #006400;
     font-family: "monaco", monospace;
     text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
-    font-size: larger;
+    font-size: 400%;
 }
 
 h1 {
