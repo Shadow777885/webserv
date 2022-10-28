@@ -20,7 +20,7 @@
     $result = mysqli_query($conn, $sql);
     foreach($result as $row) // There should only be one row returned! 
     { 
-        echo "ID: {$row['id']} \r\n Username:{$row['username']} \r\n UserID: {$row['userid']}"; 
+        echo "ID: {$row['id']}". "<br>". "Username:{$row['username']}". "<br>". "UserID: {$row['userid']}"; 
     }
     mysqli_close($conn);
     ?>
