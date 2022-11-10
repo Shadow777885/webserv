@@ -5,29 +5,36 @@
 		<script>
 			function uhoh() {
 				var x = document.getElementById("Scary");
-				var y = document.getElementById("Trolls").src;
-				document.getElementById("loser").innerHTML = y;//"A loser";
+				document.getElementById("loser").innerHTML = "A loser";
 
   				if (x.style.display === "none")
     				x.style.display = "block";
 				else
     				x.style.display = "none";
-				
-				if (y === "file:///C:/Users/1941887/Desktop/GitHub/trollLeft.png")
-					document.getElementById("Trolls").src = "trollRight.png";
-				else
-					document.getElementById("Trolls").src = "trollLeft.png";
+
+				document.getElementById("Trolls").src = "trollRight.png";
+			}
+
+			function chtxt(elem){
+				elem.innerHTML = "...That's what it does...";
+			}
+
+			function chkfield(field){
+				if (field.value === "")
+					alert("Please fill out field 'Find someone'.");
 			}
 		</script>
 	</head>
 	<link rel= "stylesheet" href="style.css">
 
 	<body>
-		<button onclick="uhoh();" value="mystery" name="mystery" id="mystery"> I wonder what this does...</button>
+		<button onclick="uhoh(); chtxt(this);" value="mystery" name="mystery" id="mystery"> I wonder what this does...</button>
 		<h1 id="loser" name="loser" value="loser">You are</h1>
+
 		<div class="Scary">
 			<p><img id="Scary" src="trollimg.png"></p>
 		</div>
+
 		<form action="send.php" method="POST">
 	    	<div>
 				<br>
@@ -39,7 +46,7 @@
 		        <input id="ID" type="ID" name="ID" placeholder="Enter ID">
 				<br>
 		        <label for="pullID">Find someone:</label><br>
-		        <input id="pullID" type="pullID" name="pullID" placeholder="Enter ID of person to find">
+		        <input id="pullID" type="pullID" name="pullID" placeholder="Enter ID of person to find" onblur="chkfield(pullID);" required>
 				<br>
 				<input id="submit" type="submit" name="submit" class="button" value="Submit">
 				<br>
