@@ -13,7 +13,7 @@ h1 {
     font-family: "monaco", monospace;
 }
 
-h2 {
+div[id=script] {
   color: #006400;
   font-family: "monaco", monospace;
 }
