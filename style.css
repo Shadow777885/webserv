@@ -12,6 +12,11 @@ h1 {
     color: #006400;
     font-family: "monaco", monospace;
 }
+
+h2 {
+  color: #006400;
+  font-family: "monaco", monospace;
+}
 .button {
     background-color: #006400; 
     border: none;
@@ -36,7 +41,7 @@ h1 {
     font-size: 15px;
   }
 
-  button[id=Script] {
+  button[id=script] {
     background-color: rgb(141, 0, 0); 
     border: none;
     color: rgb(148, 148, 148);
