@@ -14,8 +14,7 @@ h1 {
 }
 
 div[id=script] {
-  color: #006400;
-  font-family: "monaco", monospace;
+  background-color: white;
 }
 .button {
     background-color: #006400; 
