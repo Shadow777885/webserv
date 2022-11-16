@@ -13,8 +13,9 @@ h1 {
     font-family: "monaco", monospace;
 }
 
-div[id=SWscript] {
+.SWscript {
   background-color: white;
+  font-size: 1px;
 }
 .button {
     background-color: #006400; 
