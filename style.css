@@ -36,6 +36,18 @@ h1 {
     font-size: 15px;
   }
 
+  button[id=Script] {
+    background-color: rgb(141, 0, 0); 
+    border: none;
+    color: rgb(148, 148, 148);
+    padding: 9px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "monaco", monospace;
+    font-size: 15px;
+  }
+
   .Scary{
     display: block;
   }

@@ -27,9 +27,9 @@
 			function loadtxt() {
 				const xhttp = new XMLHttpRequest();
 				xhttp.onload = function() {
-					document.getElementById("demo").innerHTML = this.responseText;
+					document.getElementById("SWscript").innerHTML = this.responseText;
 				}
-				xhttp.open("GET", "StarWarsNewHope.txt", true);
+				xhttp.open("GET", "/StarWarsNewHope.txt", true);
 				xhttp.send();
 			}
 		</script>
@@ -37,8 +37,11 @@
 	<link rel= "stylesheet" href="style.css">
 
 	<body>
-		<h1>This text shall change with the click of a button ;)</h1>
-		<button type="button" onclick="loadtxt()">Load a little bit of text!:D</button>
+		<div id="SWscript">
+			<h1>This text shall change with the click of a button ;)</h1>
+		</div>
+		<button value="script" name="script" id="script" onclick="loadtxt()">Load a little bit of text!:D</button>
+		<br>
 		<button onclick="uhoh(); chtxt(this);" value="mystery" name="mystery" id="mystery"> I wonder what this does...</button>
 		<h1 id="loser" name="loser" value="loser">You are</h1>
 
