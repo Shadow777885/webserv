@@ -27,7 +27,7 @@
 			function loadtxt() {
 				const xhttp = new XMLHttpRequest();
 				xhttp.onload = function() {
-					document.getElementsByClassName("SWscript").innerHTML = this.responseText;
+					document.getElementById("SWscript").innerHTML = this.responseText;
 				}
 				xhttp.open("GET", "StarWarsNewHope.txt", true);
 				xhttp.send();
@@ -37,7 +37,7 @@
 	<link rel= "stylesheet" href="style.css">
 
 	<body>
-		<div class="SWscript">
+		<div class="SWscript" id="Swscript">
 			<h1>This text shall change with the click of a button ;)</h1>
 		</div>
 		<button type="button" value="script" name="script" id="script" onclick="loadtxt()">Load a little bit of text!:D</button>
