@@ -13,11 +13,6 @@ h1 {
     font-family: "monaco", monospace;
 }
 
-div[id=SWscript] {
-  background-color: white;
-  height: 10px;
-  width: 10px;
-}
 .button {
     background-color: #006400; 
     border: none;
