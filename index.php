@@ -8,7 +8,9 @@
                 xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     var deser = JSON.parse(this.responseText);
-                    
+                    document.getElementById("temp").innerHTML=deser.temperature;
+                    document.getElementById("press").innerHTML=deser.pressure;
+                    document.getElementById("alt").innerHTML=deser.altitude;
                     }
                 };
 				xhttp.open("POST", "sensor.php", true);
@@ -18,9 +20,9 @@
     </head>
     <body>
         <button type="button" onclick="toggle();" value="tglsens" name="tglsens" id="tgsens">Toggle sensor</button>  
-        <h1>Temperature: <?=$temperature?> <h1>
-        <h1>Pressure:</h1>
-        <h1>Altitude:</h1>
+        <h1>Temperature: <span id="temp"></span> <h1>
+        <h1>Pressure: <span id="press"></span> </h1>
+        <h1>Altitude: <span id="alt"></span> </h1>
         <h1> Control and live feed for the Spi </h1>
         <break/>
 
