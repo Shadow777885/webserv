@@ -7,9 +7,9 @@
     <body>
         <p>
         <?php
-            'gpio toggle 0';
+            shell_exec("gpio toggle 0");
         ?>
         </p>
     </body>
-    
+
 </html>
