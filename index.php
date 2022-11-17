@@ -5,12 +5,22 @@
         <script>
             function toggle(){
                 const xhttp = new XMLHttpRequest();
-				xhttp.open("POST", "formproc.php", true);
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var deser = JSON.parse(this.responseText);
+                    
+                    }
+                };
+				xhttp.open("POST", "sensor.php", true);
 				xhttp.send();
             }
         </script>
     </head>
     <body>
+        <button type="button" onclick="toggle();" value="tglsens" name="tglsens" id="tgsens">Toggle sensor</button>  
+        <h1>Temperature: <?=$temperature?> <h1>
+        <h1>Pressure:</h1>
+        <h1>Altitude:</h1>
         <h1> Control and live feed for the Spi </h1>
         <break/>
 
