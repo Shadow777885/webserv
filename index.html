@@ -2,12 +2,20 @@
 <html>
     <head> 
         <title> Spi Landing </title>
+        <script>
+            function toggle(){
+                const xhttp = new XMLHttpRequest();
+				xhttp.open("POST", "formproc.php", true);
+				xhttp.send();
+            }
+        </script>
     </head>
     <body>
         <h1> Control and live feed for the Spi </h1>
         <break/>
 
     <div class = "Controls">
+        <button type="button" onclick="toggle();" value="tgled" name="tgled" id="tgled">Toggle LED</button>
         <h3> Controls of Spi </h3>
         <p>
             Use the arrows hereunder to control the Spi
