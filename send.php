@@ -13,8 +13,8 @@
     $newid = htmlspecialchars($_POST['ID']);
     $pullID = htmlspecialchars($_POST['pullID']);
 
-    //$sql = "INSERT INTO Userinfo (username, userid) VALUES ('{$newuser}', {$newid});";
-    //echo $result ? "Sent properly." : "Failure: {mysqli_error($conn)}"; 
+    $sql = "INSERT INTO Userinfo (username, userid) VALUES ('{$newuser}', {$newid});";
+    $result = mysqli_query($conn, $sql);
     $sql = "SELECT id, username, userid FROM Userinfo WHERE id={$pullID};";
     $result = mysqli_query($conn, $sql);
     if ($result -> num_rows === 1)
